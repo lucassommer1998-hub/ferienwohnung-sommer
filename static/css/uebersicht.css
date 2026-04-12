@@ -190,13 +190,14 @@ font-weight: 700;
 
 /* Bewertungskarte (rechts unten wie im Entwurf) */
 .bewertung-card {
-margin-top: 14px;
-padding: 16px;
-border-radius: 15px;
-border: 1px solid #e7e7e7;
-background: #fff;
-box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-}
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: 15px;
+  border: 1px solid #e7e7e7;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  text-align: center;
+  }
 
 .bewertung-title {
 font-size: 20px;
