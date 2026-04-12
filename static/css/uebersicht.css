@@ -74,7 +74,7 @@ transform: translateY(-50%) scale(1.05);
 text-align: center;
 background-color: #224E7C;
 color: white;
-padding: 10px 16px;
+padding: 5px 16px;
 margin-top: 12px;
 }
 
@@ -264,42 +264,4 @@ height: 240px;
 }
 }
 
-/* Airbnb Logo */
-.airbnb-logo {
-  height: 22px;
-  vertical-align: middle;
-  margin-left: 6px;
-}
-
-/* Lorbeer-Zeile */
-.bewertung-lorbeer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 8px 0;
-}
-
-.lorbeer {
-  font-size: 28px;
-}
-
-.bewertung-score {
-  font-size: 54px;
-  font-weight: 900;
-  color: #224E7C;
-  line-height: 1;
-}
-
-/* Preisliste wie Ausstattung */
-.preis .box-content ul {
-  margin: 10px 0 10px 18px;
-  padding: 0;
-}
-
-.preis .box-content li {
-  margin-bottom: 6px;
-  font-size: 15px;
-  color: #3674B5;
-}
 
