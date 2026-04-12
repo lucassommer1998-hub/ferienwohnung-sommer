@@ -1,0 +1,140 @@
+/* ÜBER UNS – ueber_uns.css */
+
+.ueber-uns-main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 140px 20px 60px;
+}
+
+.ueber-uns-hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.ueber-uns-hero h2 {
+    font-size: 42px;
+    font-weight: 900;
+    color: #3674B5;
+    margin-bottom: 12px;
+}
+
+.ueber-uns-intro {
+    font-size: 18px;
+    color: #3674B5;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.ueber-uns-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+.ueber-uns-text-box {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 28px 32px;
+    text-align: left;
+}
+
+.ueber-uns-text-box h3 {
+    color: #224E7C;
+    font-size: 24px;
+    margin-bottom: 14px;
+}
+
+.ueber-uns-text-box p {
+    color: #3674B5;
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 10px;
+}
+
+/* AIRBNB BADGE */
+.airbnb-badge {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #f0f8ff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 16px;
+    border: 1px solid #d0e8f5;
+}
+
+.badge-score {
+    font-size: 36px;
+    font-weight: 900;
+    color: #224E7C;
+    white-space: nowrap;
+}
+
+.badge-title {
+    font-weight: 700;
+    color: #224E7C;
+    font-size: 15px;
+}
+
+.airbnb-red {
+    color: #ff385c;
+    font-weight: 800;
+}
+
+.badge-sub {
+    font-size: 13px;
+    color: #3674B5;
+}
+
+/* KONTAKT-SECTION */
+.kontakt-section {
+    background: #3674B5;
+    border-radius: 15px;
+    text-align: center;
+    padding: 40px 30px;
+    color: white;
+}
+
+.kontakt-section h3 {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.kontakt-section p {
+    font-size: 16px;
+    margin-bottom: 24px;
+    opacity: 0.9;
+}
+
+.kontakt-button {
+    background-color: white !important;
+    color: #3674B5 !important;
+    font-size: 16px;
+    padding: 14px 36px;
+}
+
+.kontakt-button:hover {
+    background-color: #EAFFFA !important;
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .ueber-uns-hero h2 {
+        font-size: 30px;
+    }
+
+    .ueber-uns-text-box {
+        padding: 20px;
+    }
+
+    .airbnb-badge {
+        flex-direction: column;
+        text-align: center;
+    }
+}

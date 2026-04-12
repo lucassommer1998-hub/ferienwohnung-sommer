@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buchen – Ferienwohnung Sommer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/buchen.css">
+    <script defer src="static/js/buchen.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="static/images/Logo.png" alt="Logo">
+                <h1>Ferienwohnung Sommer</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="uebersicht.html">Übersicht</a></li>
+                    <li><a href="ueber_uns.html">Über uns</a></li>
+                    <li><a href="buchen.html" class="button">Buchen</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="buchen-main">
+
+        <section class="buchen-hero">
+            <h2>Jetzt anfragen</h2>
+            <p>Füllen Sie das Formular aus und wir melden uns schnellstmöglich bei Ihnen.</p>
+        </section>
+
+        <section class="buchen-layout">
+
+            <!-- FORMULAR -->
+            <div class="buchen-form-box">
+                <form id="buchungsformular" action="mailto:Sommer.Burkhard@t-online.de" method="get">
+
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Ihr vollständiger Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-Mail *</label>
+                        <input type="email" id="email" name="email" placeholder="ihre@email.de" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefon">Telefon</label>
+                        <input type="tel" id="telefon" name="telefon" placeholder="+49 ...">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="anreise">Anreise *</label>
+                            <input type="date" id="anreise" name="anreise" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="abreise">Abreise *</label>
+                            <input type="date" id="abreise" name="abreise" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gaeste">Anzahl Gäste *</label>
+                        <select id="gaeste" name="gaeste" required>
+                            <option value="" disabled selected>Bitte wählen</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 Personen</option>
+                            <option value="3">3 Personen</option>
+                            <option value="4">4 Personen</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nachricht">Nachricht</label>
+                        <textarea id="nachricht" name="nachricht" rows="4" placeholder="Haben Sie besondere Wünsche oder Fragen?"></textarea>
+                    </div>
+
+                    <div id="preis-info" class="preis-info hidden">
+                        <span id="preis-text"></span>
+                    </div>
+
+                    <button type="submit" class="submit-button">Anfrage senden</button>
+                    <p class="form-hinweis">* Pflichtfelder. Wir melden uns innerhalb von 24 Stunden.</p>
+                </form>
+            </div>
+
+            <!-- INFO-PANEL -->
+            <div class="buchen-info-box">
+                <h3>Preise &amp; Konditionen</h3>
+                <div class="info-item">
+                    <span class="info-label">Preis pro Nacht</span>
+                    <span class="info-value">ab 89 €</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Endreinigung</span>
+                    <span class="info-value">50 €</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Mindestaufenthalt</span>
+                    <span class="info-value">3 Nächte</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Max. Gäste</span>
+                    <span class="info-value">4 Personen</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Haustiere</span>
+                    <span class="info-value">Nicht erlaubt</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Stornierung</span>
+                    <span class="info-value">Kostenfrei bis 1 Tag vor Anreise</span>
+                </div>
+
+                <div class="direktkontakt">
+                    <h3>Direktkontakt</h3>
+                    <p>Sie können uns auch direkt erreichen:</p>
+                    <p>📞 04746/8282<br>📱 +49 176 34417102</p>
+                    <p>✉️ Sommer.Burkhard@t-online.de</p>
+                    <a href="https://www.airbnb.de" target="_blank" class="airbnb-link">Auch auf Airbnb buchbar ↗</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-section">
+            <div class="footer-icon">
+                <img src="static/images/FooterIcon_Location.png" alt="Adresse">
+            </div>
+            <div>
+                <strong>Unsere Adresse:</strong><br>
+                Auf der Alm 2<br>
+                27628 Wittstedt
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="footer-icon">
+                <img src="static/images/FooterIcon_Phone.png" alt="Telefon">
+            </div>
+            <div>
+                <strong>Unsere Telefonnummern:</strong><br>
+                04746/8282<br>
+                +49 176 34417102
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="footer-icon">
+                <img src="static/images/FooterIcon_Mail.png" alt="E-Mail">
+            </div>
+            <div>
+                <strong>Unsere Mail-Adresse:</strong><br>
+                Sommer.Burkhard@t-online.de
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

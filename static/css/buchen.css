@@ -1,0 +1,258 @@
+/* BUCHEN – buchen.css */
+
+.buchen-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 140px 20px 60px;
+}
+
+.buchen-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.buchen-hero h2 {
+    font-size: 42px;
+    font-weight: 900;
+    color: #3674B5;
+    margin-bottom: 10px;
+}
+
+.buchen-hero p {
+    font-size: 17px;
+    color: #3674B5;
+    opacity: 0.85;
+}
+
+/* LAYOUT: Formular + Info nebeneinander */
+.buchen-layout {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* FORMULAR-BOX */
+.buchen-form-box {
+    flex: 1 1 500px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 32px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: #224E7C;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    border: 1.5px solid #c8dff0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: #3674B5;
+    background: #f7fbff;
+    transition: border-color 0.2s ease;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #3674B5;
+    background: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* Zwei Felder nebeneinander (Datum) */
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Preis-Kalkulation */
+.preis-info {
+    background: #eafffa;
+    border: 1.5px solid #A1E3F9;
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: #224E7C;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+}
+
+.preis-info.hidden {
+    display: none;
+}
+
+/* Absendebutton */
+.submit-button {
+    width: 100%;
+    background-color: #3674B5;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #2a5a8f;
+    transform: scale(1.02);
+}
+
+.form-hinweis {
+    text-align: center;
+    font-size: 12px;
+    color: #3674B5;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+/* INFO-PANEL rechts */
+.buchen-info-box {
+    flex: 0 0 280px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 28px 24px;
+}
+
+.buchen-info-box h3 {
+    color: #224E7C;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid #e8f2fb;
+    gap: 10px;
+}
+
+.info-item:last-of-type {
+    border-bottom: none;
+}
+
+.info-label {
+    font-size: 14px;
+    color: #3674B5;
+    opacity: 0.8;
+}
+
+.info-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: #224E7C;
+    text-align: right;
+}
+
+/* Direktkontakt */
+.direktkontakt {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 2px solid #e8f2fb;
+}
+
+.direktkontakt h3 {
+    color: #224E7C;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.direktkontakt p {
+    font-size: 14px;
+    color: #3674B5;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+.airbnb-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #ff385c;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.airbnb-link:hover {
+    opacity: 0.75;
+}
+
+/* Karte auf Übersichtsseite */
+.karte-section {
+    width: 80%;
+    margin: 10px auto 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 14px 16px 16px;
+}
+
+.karte-head {
+    color: #224E7C;
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.karte-container {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    .buchen-layout {
+        flex-direction: column;
+    }
+
+    .buchen-info-box {
+        flex: 1 1 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .buchen-hero h2 {
+        font-size: 30px;
+    }
+
+    .buchen-form-box {
+        padding: 20px;
+    }
+}
