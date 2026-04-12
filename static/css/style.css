@@ -1,3 +1,8 @@
+/* ===== BASE ===== */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #EAFFFA;
@@ -7,13 +12,13 @@ body {
     color: #3674B5;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #EAFFFA;
-    padding: 20px;
+    padding: 12px 20px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -36,18 +41,18 @@ header {
 }
 
 .logo img {
-    height: 90px;
+    height: 70px;
     margin-right: 10px;
 }
 
 .logo h1 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     color: #3674B5;
     margin: 0;
 }
 
-/* NAVIGATION */
+/* ===== NAVIGATION ===== */
 nav {
     display: flex;
     align-items: center;
@@ -56,21 +61,17 @@ nav {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     gap: 20px;
     align-items: center;
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    display: inline;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #3674B5;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     padding: 5px 10px;
     transition: color 0.3s ease-in-out;
 }
@@ -79,21 +80,51 @@ nav ul li a:hover {
     color: #2a5a8f;
 }
 
-/* NAVIGATION UNDERLINE ACTIV */
 nav ul li a.active {
-    text-decoration: none;
     position: relative;
-    padding-bottom: 5px; 
-    display: inline-block; 
+    padding-bottom: 5px;
+    display: inline-block;
     border-bottom: 3px solid #3674B5;
 }
 
-/* NAVIGATION BAR BUTTONS */
+/* ===== HAMBURGER MENÜ ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+    background: none;
+    border: none;
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: #3674B5;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger Animation wenn offen */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ===== BUTTON ===== */
 .button {
     display: inline-block;
     background-color: #3674B5;
-    color: white;
-    padding: 12px 30px;
+    color: white !important;
+    padding: 10px 24px;
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
@@ -103,98 +134,92 @@ nav ul li a.active {
 
 .button:hover {
     background-color: #2a5a8f;
-    color: white;
     transform: scale(1.05);
 }
 
-/* SLIDER */
+/* ===== SLIDER ===== */
 .slideshow-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: relative;
     width: 90%;
     max-width: 1300px;
-    height: 550px;          /* ← feste Höhe für alle Slides */
-    margin: 150px auto 20px;
+    height: 550px;
+    margin: 110px auto 20px;
     overflow: hidden;
     border-radius: 15px;
 }
 
 .mySlides {
     width: 100%;
-    height: 100%;           /* ← füllt den Container */
+    height: 100%;
     display: none;
-    border-radius: 15px;
 }
 
 .mySlides img {
     width: 100%;
-    height: 100%;           /* ← füllt den Slide */
-    object-fit: cover;      /* ← Bild wird zugeschnitten, nicht verzerrt */
-    object-position: center;/* ← zentriert ausschneiden */
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     border-radius: 15px;
     display: block;
 }
-  
-/* SLIDER BUTTONS */
+
+/* Slider Buttons */
 .prev, .next {
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     background-color: #A1E3F9;
     color: #3674B5;
-    padding: 7px;
+    padding: 8px 10px;
     cursor: pointer;
     font-size: 20px;
     border-radius: 50%;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s
+    transition: transform 0.3s, background-color 0.3s;
+    user-select: none;
+    z-index: 10;
 }
 
-    /* HOVER EFFECT SLIDER BUTTONS */
 .prev:hover, .next:hover {
     background-color: #2a5a8f;
-    color: #A1E3F9; 
-    transform: scale(1.1); 
+    color: #A1E3F9;
+    transform: translateY(-50%) scale(1.1);
 }
 
-    /* POSTION SLIDER BUTTONS */
-.next {
-    right: 10px;
-}
-
-.prev {
-    left: 10px;
-}
+.next { right: 10px; }
+.prev { left: 10px; }
 
 /* Fading animation */
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
 }
-  
+
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from { opacity: .4 }
+    to { opacity: 1 }
 }
 
-/* Welcome Title */
+/* ===== WELCOME TITLE ===== */
 .welcome-title {
-    font-size: 40px;
+    font-size: 38px;
     font-weight: 900;
     text-align: center;
     color: #3674B5;
     margin-top: 40px;
+    margin-bottom: 10px;
+    padding: 0 16px;
 }
 
-/* Info Boxen */
+/* ===== INFO BOXEN ===== */
 .info-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 1000px;
     margin: auto;
-    gap: 40px;
+    gap: 30px;
+    padding: 0 16px 20px;
 }
 
 .info-box {
@@ -202,7 +227,7 @@ nav ul li a.active {
     flex-direction: row;
     align-items: center;
     gap: 20px;
-    width: 90%;
+    width: 100%;
     max-width: 900px;
     background: white;
     padding: 20px;
@@ -215,60 +240,201 @@ nav ul li a.active {
 }
 
 .info-box img {
-    width: 400px;
-    height: 300px;
+    width: 40%;
+    max-width: 380px;
+    height: 260px;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 12px;
+    flex-shrink: 0;
 }
 
 .info-text {
-    width: 55%;
+    flex: 1;
     text-align: left;
-
 }
 
 .info-text h3 {
     color: #224E7C;
-    font-size: 30px;
+    font-size: 26px;
+    margin-bottom: 10px;
 }
 
 .info-text p {
     font-size: 15px;
+    line-height: 1.6;
 }
 
-
-/* Footer */
+/* ===== FOOTER ===== */
 .footer {
-  background-color: #EAFFFA;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 30px 20px;
-  border-top: 2px solid #ddd;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap;
-  margin-top: 80px;
+    background-color: #EAFFFA;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 20px;
+    border-top: 2px solid #ddd;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    margin-top: 60px;
 }
 
 .footer-section {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  max-width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 280px;
+    text-align: left;
 }
 
 .footer-icon {
     background-color: #3674B5;
     border-radius: 50%;
-    width: 60px; 
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+    flex-shrink: 0;
+}
 
 .footer-icon img {
-    width: 30px;   
-    object-fit: contain; 
+    width: 24px;
+    object-fit: contain;
+}
 
+.footer-section div {
+    font-size: 14px;
+    color: #3674B5;
+    line-height: 1.6;
+}
+
+/* ===== RESPONSIVE – TABLET (max 900px) ===== */
+@media (max-width: 900px) {
+
+    .logo img {
+        height: 55px;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    .slideshow-container {
+        height: 380px;
+        margin-top: 90px;
+    }
+
+    .welcome-title {
+        font-size: 30px;
+    }
+
+    .info-box {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .info-box img {
+        width: 100%;
+        max-width: 100%;
+        height: 220px;
+    }
+
+    .info-text {
+        text-align: center;
+    }
+
+    .info-text h3 {
+        font-size: 22px;
+    }
+}
+
+/* ===== RESPONSIVE – HANDY (max 600px) ===== */
+@media (max-width: 600px) {
+
+    /* Header */
+    .logo h1 {
+        font-size: 15px;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    /* Hamburger anzeigen */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Nav verstecken – wird per JS ein/ausgeklappt */
+    nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #EAFFFA;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1050;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 28px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 22px;
+    }
+
+    /* Slider */
+    .slideshow-container {
+        height: 240px;
+        margin-top: 80px;
+        width: 95%;
+    }
+
+    /* Welcome */
+    .welcome-title {
+        font-size: 24px;
+    }
+
+    /* Info Boxen */
+    .info-box {
+        padding: 16px;
+    }
+
+    .info-box img {
+        height: 180px;
+    }
+
+    .info-text h3 {
+        font-size: 18px;
+    }
+
+    .info-text p {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-section {
+        max-width: 100%;
+        width: 90%;
+    }
 }
