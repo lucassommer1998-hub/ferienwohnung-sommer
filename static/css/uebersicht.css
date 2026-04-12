@@ -263,10 +263,19 @@ font-size: 24px;
 .slideshow-gallery .gallerySlide img {
 height: 240px;
 }
+
 }
 @media (max-width: 600px) {
   .caption-container {
       padding: 3px 10px;
       font-size: 12px;
   }
+}
+
+.bewertung-lorbeer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 8px 0;
 }
