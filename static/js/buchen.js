@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const preisInfo = document.getElementById('preis-info');
     const preisText = document.getElementById('preis-text');
 
-    const PREIS_PRO_NACHT = 89;
+    const PREIS_PRO_NACHT = 80;
     const ENDREINIGUNG = 50;
 
     // Heutiges Datum als Minimum für Anreise setzen
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const gesamt = uebernachtung + ENDREINIGUNG;
 
         preisText.textContent =
-            `${naechte} Nächte × 89 € + 50 € Endreinigung = ${gesamt} € Gesamt`;
+            `${naechte} Nächte × 80 € + 50 € Endreinigung = ${gesamt} € Gesamt`;
         preisInfo.classList.remove('hidden');
     }
 
