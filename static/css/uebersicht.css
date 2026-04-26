@@ -71,10 +71,11 @@
   text-align: center;
   background-color: #224E7C;
   color: white;
-  padding: 8px 16px;
+  padding: 2px 16px;
   font-size: 17px;
   font-weight: 700;
   margin-top: 12px;
+  line-height: 1.2;
 }
 
 .thumbs {
