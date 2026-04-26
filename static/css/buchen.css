@@ -251,3 +251,37 @@
         padding: 12px;
     }
 }
+
+/* Buchungs-Buttons */
+.buchungs-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.buchungs-btn {
+    display: block;
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.buchungs-btn:hover {
+    opacity: 0.85;
+    transform: scale(1.02);
+}
+
+.airbnb-btn {
+    background: #ff385c;
+    color: white;
+}
+
+.booking-btn {
+    background: #003580;
+    color: white;
+}
