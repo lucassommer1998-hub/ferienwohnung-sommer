@@ -438,3 +438,14 @@ nav ul li a.active {
         width: 90%;
     }
 }
+
+/* Logo als Link */
+a.logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+a.logo h1 {
+    color: #3674B5;
+}
