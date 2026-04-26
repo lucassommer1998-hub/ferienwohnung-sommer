@@ -1,68 +1,69 @@
 * {
   box-sizing: border-box;
-}
+  }
 
 /* GALERIE-CARD */
 .slideshow-gallery {
-  position: relative;
-  width: 80%;
-  margin: 150px auto 16px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  overflow: hidden;
+position: relative;
+width: 80%;
+margin: 150px auto 16px;
+background: white;
+border-radius: 15px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+overflow: hidden;
 }
 
 .slideshow-gallery h4 {
-  color: #224E7C;
-  font-size: 30px;
-  text-align: left;
-  padding: 14px 16px 0;
-  margin: 0;
+color: #224E7C;
+font-size: 30px;
+text-align: left;
+padding: 14px 16px 0;
+margin: 0;
 }
 
+/* Slides */
 .gallerySlide {
-  display: none;
-  padding: 12px 16px 0;
+display: none;
+padding: 12px 16px 0;
 }
 
 .numbertext {
-  color: #3674B5;
-  font-size: 12px;
-  padding: 6px 4px;
+color: #3674B5;
+font-size: 12px;
+padding: 6px 4px;
 }
 
 .slideshow-gallery .gallerySlide img {
-  width: 100%;
-  max-width: 980px;
-  height: 520px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-  border-radius: 15px;
+width: 100%;
+max-width: 980px;
+height: 520px;
+object-fit: cover;
+display: block;
+margin: 0 auto;
+border-radius: 15px;
 }
 
 /* Pfeile */
 .prev1, .next1 {
-  cursor: pointer;
-  position: absolute;
-  top: 52%;
-  transform: translateY(-50%);
-  padding: 14px 16px;
-  background-color: #A1E3F9;
-  color: #3674B5;
-  font-weight: bold;
-  font-size: 22px;
-  border-radius: 12px;
-  user-select: none;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+cursor: pointer;
+position: absolute;
+top: 52%;
+transform: translateY(-50%);
+padding: 14px 16px;
+background-color: #A1E3F9;
+color: #3674B5;
+font-weight: bold;
+font-size: 22px;
+border-radius: 12px;
+user-select: none;
+box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .prev1:hover, .next1:hover {
-  background-color: #2a5a8f;
-  color: #A1E3F9;
-  transform: translateY(-50%) scale(1.05);
+background-color: #2a5a8f;
+color: #A1E3F9;
+transform: translateY(-50%) scale(1.05);
 }
 
 .next1 { right: 16px; }
@@ -70,214 +71,196 @@
 
 /* Caption */
 .caption-container {
-  text-align: center;
-  background-color: #224E7C;
-  color: white;
-  padding: 3px 16px;
-  font-size: 13px;
-  margin-top: 12px;
+text-align: center;
+background-color: #224E7C;
+color: white;
+padding: 10px 16px;
+margin-top: 12px;
 }
 
 /* Thumbnails */
 .thumbs {
-  display: flex;
-  gap: 10px;
-  padding: 12px 16px 16px;
-  overflow-x: auto;
+display: flex;
+gap: 10px;
+padding: 12px 16px 16px;
+overflow-x: auto;
 }
 
-.thumbs::-webkit-scrollbar { height: 8px; }
+.thumbs::-webkit-scrollbar {
+height: 8px;
+}
 .thumbs::-webkit-scrollbar-thumb {
-  background: rgba(54,116,181,0.35);
-  border-radius: 99px;
+background: rgba(54,116,181,0.35);
+border-radius: 99px;
 }
 
 .cursor { cursor: pointer; }
 
 .demo {
-  width: 120px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 10px;
-  opacity: 0.6;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  flex: 0 0 auto;
+width: 120px;
+height: 80px;
+object-fit: cover;
+border-radius: 10px;
+opacity: 0.6;
+transition: opacity 0.2s ease, transform 0.2s ease;
+flex: 0 0 auto;
 }
 
-.demo:hover { opacity: 1; transform: scale(1.02); }
-.demo.active { opacity: 1; outline: 3px solid #3674B5; }
+.demo:hover {
+opacity: 1;
+transform: scale(1.02);
+}
+
+.demo.active {
+opacity: 1;
+outline: 3px solid #3674B5;
+}
 
 /* BESCHREIBUNG */
 .beschreibung {
-  width: 80%;
-  margin: 10px auto 16px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+width: 80%;
+margin: 10px auto 16px;
+background: white;
+border-radius: 15px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .beschreibung-head {
-  color: #224E7C;
-  font-size: 30px;
-  text-align: left;
-  padding: 14px 16px 0;
+color: #224E7C;
+font-size: 30px;
+text-align: left;
+padding: 14px 16px 0;
 }
 
 .beschreibung-text {
-  font-size: 16px;
-  text-align: left;
-  padding: 6px 16px 16px;
-  line-height: 1.55;
-  color: #3674B5;
+font-size: 16px;
+text-align: left;
+padding: 6px 16px 16px;
+line-height: 1.55;
+color: #3674B5;
 }
 
 /* AUSSTATTUNG / PREISE */
 .box-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 80%;
-  margin: 20px auto 40px;
-  gap: 20px;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+width: 80%;
+margin: 20px auto 40px;
+gap: 20px;
 }
 
 .ausstattung, .preis {
-  flex: 1 1 48%;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 14px 16px 16px;
-  text-align: left;
+flex: 1 1 48%;
+background: white;
+border-radius: 15px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+padding: 14px 16px 16px;
+text-align: left;
 }
 
 .ausstattung-head,
 .preis-head {
-  color: #224E7C;
-  font-size: 30px;
-  padding: 0;
-  margin-bottom: 10px;
+color: #224E7C;
+font-size: 30px;
+padding: 0;
+margin-bottom: 10px;
 }
 
 .box-content {
-  color: #3674B5;
-  line-height: 1.55;
-  font-size: 15px;
+color: #3674B5;
+line-height: 1.55;
+font-size: 15px;
 }
 
 .box-content ul {
-  margin: 10px 0 10px 18px;
-  padding: 0;
+margin: 10px 0 10px 18px;
+padding: 0;
 }
 
-.box-content li { margin-bottom: 6px; }
+.box-content li {
+margin-bottom: 6px;
+}
 
 .hinweis {
-  margin-top: 10px;
-  font-weight: 700;
+margin-top: 10px;
+font-weight: 700;
 }
 
-/* BEWERTUNGSKARTE */
+/* Bewertungskarte (rechts unten wie im Entwurf) */
 .bewertung-card {
-  margin-top: 14px;
-  padding: 16px;
-  border-radius: 15px;
-  border: 1px solid #e7e7e7;
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-  text-align: center;
+margin-top: 14px;
+padding: 16px;
+border-radius: 15px;
+border: 1px solid #e7e7e7;
+background: #fff;
+box-shadow: 0 2px 5px rgba(0,0,0,0.08);
 }
 
 .bewertung-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #224E7C;
-  margin-bottom: 8px;
+font-size: 20px;
+font-weight: 700;
+color: #224E7C;
+margin-bottom: 8px;
 }
 
-.bewertung-lorbeer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 8px 0;
-}
-
-.lorbeer {
-  font-size: 28px;
+.bewertung-title .airbnb {
+color: #ff385c;
+font-weight: 800;
 }
 
 .bewertung-score {
-  font-size: 54px;
-  font-weight: 900;
-  color: #224E7C;
-  line-height: 1;
+font-size: 54px;
+font-weight: 900;
+color: #224E7C;
+line-height: 1;
+margin: 8px 0;
 }
 
 .bewertung-sub {
-  font-weight: 700;
-  color: #224E7C;
-  margin-bottom: 6px;
+font-weight: 700;
+color: #224E7C;
+margin-bottom: 6px;
 }
 
 .bewertung-text {
-  font-size: 13px;
-  color: #3674B5;
-  line-height: 1.4;
-}
-
-/* KARTE */
-.karte-section {
-  width: 80%;
-  margin: 10px auto 40px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 14px 16px 16px;
-}
-
-.karte-container {
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.karte-container iframe {
-  width: 100%;
-  height: 500px;
-  border: 0;
-  border-radius: 12px;
-  display: block;
+font-size: 16px;
+font-weight: 700;
+color: #3674B5;
+line-height: 1.4;
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .slideshow-gallery,
-  .beschreibung,
-  .box-wrapper,
-  .karte-section {
-    width: 92%;
-  }
+.slideshow-gallery,
+.beschreibung,
+.box-wrapper {
+width: 92%;
+}
 
-  .slideshow-gallery .gallerySlide img { height: 320px; }
+.slideshow-gallery .gallerySlide img {
+height: 320px;
+}
 
-  .ausstattung, .preis { flex: 1 1 100%; }
+.ausstattung, .preis {
+flex: 1 1 100%;
+}
 
-  .demo { width: 100px; height: 70px; }
+.demo {
+width: 100px;
+height: 70px;
+}
 }
 
 @media (max-width: 500px) {
-  .slideshow-gallery h4,
-  .beschreibung-head,
-  .ausstattung-head,
-  .preis-head {
-    font-size: 24px;
-  }
+.slideshow-gallery h4,
+.beschreibung-head,
+.ausstattung-head,
+.preis-head {
+font-size: 24px;
+}
 
-  .slideshow-gallery .gallerySlide img { height: 240px; }
-
-  .caption-container {
-    padding: 3px 10px;
-    font-size: 12px;
-  }
-
-  .karte-container iframe { height: 300px; }
+.slideshow-gallery .gallerySlide img {
+height: 240px;
+}
 }
